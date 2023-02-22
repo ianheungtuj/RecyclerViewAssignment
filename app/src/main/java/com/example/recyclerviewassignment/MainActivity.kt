@@ -20,9 +20,7 @@ class MainActivity : AppCompatActivity() {
         val displayImageView = findViewById<ImageView>(R.id.displayImageView)
         val nameTextView = findViewById<TextView>(R.id.nameTextView)
 
-        // Our data is an array of the images we inserted, but since they are already numbered,
-        // we can just use an array of integers instead
-
+        // Array of 30 NBA team logos and their team names
         val images = arrayOf(
             ImageItem(R.drawable.atlantahawks, "Atlanta Hawks"),
             ImageItem(R.drawable.bostonceltics, "Boston Celtics"),
@@ -62,9 +60,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         recyclerView.adapter = ImageAdapter(images, callback)
-
-        // Add a layout manager, which requires a context, this (main)
-        // recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = GridLayoutManager(this, 3)
     }
 }

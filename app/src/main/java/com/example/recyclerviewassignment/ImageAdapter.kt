@@ -8,19 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 
-// We created a class inside a class here. ImageViewHolder holds the images,
-// and ImageAdapter holds ImageviewHolders
-
-
-// We require ImageAdapter to have to take in an array of integers as the parameters
 class ImageAdapter(_imageItems : Array<ImageItem>, _callback : (ImageItem)->Unit) : RecyclerView.Adapter<ImageAdapter.ImageItemViewHolder>()
 {
     private val imageItems = _imageItems
     private val callback = _callback
 
-    // What is an inner class?
-    // If there is a normal class inside ImageAdapter, it cannot access things outside of ImageAdapter
-    // But inner classes have direct access to anything ImageAdapter has access to
     inner class ImageItemViewHolder(layout : View) : RecyclerView.ViewHolder(layout){
         val imageView = layout.findViewById<ImageView>(R.id.imageView)
         val textView = layout.findViewById<TextView>(R.id.textView)

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RecyclerViewAssignment</string>
+    <string name="textDisplay">Select an NBA Team</string>
 </resources>
